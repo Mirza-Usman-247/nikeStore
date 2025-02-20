@@ -137,7 +137,7 @@ export default function NikeRegisterForm() {
             </Label>
           </div>
           <div className="text-center text-sm text-muted-foreground">
-            By creating an account, you agree to Nike's{" "}
+            By creating an account, you agree to Nike`&apos;`s{" "}
             <a href="#" className="underline">
               Privacy Policy
             </a>{" "}

@@ -12,7 +12,6 @@ import { BiLoaderAlt } from "react-icons/bi";
 
 const CartPage = () => {
   const { getGroupedItems, getTotalPrice } = useCartStore();
-  const [isLoading, setLoading] = useState(false);
   const [mounted, setMounted] = useState(false);
   const cartProduct = getGroupedItems();
   useEffect(() => {

@@ -70,7 +70,7 @@ const Filter = ({ featured }: Props) => {
       }
     };
     fetchData();
-  }, []);
+  });
   // Apply filters
   const filterChange = (newFilters: Filters) => {
     setFilters(newFilters);

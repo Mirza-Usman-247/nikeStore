@@ -3,6 +3,7 @@ import { client } from "@/sanity/lib/client";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import AddToCart from "./AddToCart";
+import { Image as IImage } from "sanity";
 
 
 const ProductDataFetching = async () => {
@@ -10,6 +11,16 @@ const ProductDataFetching = async () => {
   return fetchData;
 };
 
+interface Product {
+  productName: string;
+  price: string;
+  image: IImage
+  description: string;
+  slug: {
+    current: string;
+  };
+
+}
 
 interface Props {
   Pathname?: string;
@@ -17,7 +28,7 @@ interface Props {
 const ProductDetails = async ({ Pathname }: Props) => {
 
   const product = await ProductDataFetching();
-  const slug = product.find((val: any) => val.slug.current === Pathname);
+  const slug = product.find((val: Product) => val.slug.current === Pathname);
   if (!slug) {
     return <div>Product not found</div>;
   }
