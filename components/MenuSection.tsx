@@ -5,9 +5,6 @@ import { Navbar } from "@/constant";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { AiOutlineMenu } from "react-icons/ai";
-import Filter from "./Filter";
-import CategoryFilter from "./CategoryFilter";
-
 interface Props{
   className?: string
 }

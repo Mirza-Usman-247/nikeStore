@@ -35,12 +35,12 @@ export function CategoryFilter({
   };
   const handleCheckboxChange = (type: string, value: string) => {
     const updated = [type].includes(value)
-      ? [type].filter((v: any) => v !== value)
+      ? [type].filter((v) => v !== value)
       : [...[type], value];
     onFilterChange({ ...filters, [type]: updated });
   };
 
-  const handlePriceChange = (range: any) => {
+  const handlePriceChange = (range: [number, number]) => {
     const updated = filters.price.includes(range)
       ? filters.price.filter((r) => r !== range)
       : [...filters.price, range];

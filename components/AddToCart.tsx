@@ -1,12 +1,11 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { Button } from "./ui/button";
 import { IoBagOutline } from "react-icons/io5";
 import { Product } from "@/sanity.types";
 import useCartStore from "@/cartStore";
 import { cn } from "@/lib/utils";
 import toast from "react-hot-toast";
-import Link from "next/link";
 
 interface Props {
   product: Product;

@@ -44,7 +44,7 @@ export default function HelpCenter() {
             </p>
 
             <p>
-              If you enter your PAN information at checkout, you'll be able to
+              If you enter your PAN information at checkout, you`&apos;`ll be able to
               pay for your order with PayTM or a local credit or debit card.
             </p>
 
@@ -53,7 +53,7 @@ export default function HelpCenter() {
             <p>
               <span className="font-medium">Nike Members</span> can store
               multiple debit or credit cards in their profile for faster
-              checkout. If you're not already a Member,{" "}
+              checkout. If you`&apos;`re not already a Member,{" "}
               <a href="#" className="underline">
                 join us today
               </a>
@@ -91,7 +91,7 @@ export default function HelpCenter() {
                   Can I pay for my order with multiple methods?
                 </h4>
                 <p className="text-gray-600">
-                  No, payment for Nike orders can't be split between multiple
+                  No, payment for Nike orders can`&apos;`t be split between multiple
                   payment methods.
                 </p>
               </div>
@@ -108,13 +108,13 @@ export default function HelpCenter() {
 
               <div>
                 <h4 className="font-medium">
-                  Why don't I see Apple Pay as an option?
+                  Why don`&apos;`t I see Apple Pay as an option?
                 </h4>
                 <p className="text-gray-600">
                   To see Apple Pay as an option in the Nike App or on Nike.com,
-                  you'll need to use a compatible Apple device running the
+                  you`&apos;`ll need to use a compatible Apple device running the
                   latest OS, be signed in to your iCloud account and have a
-                  supported card in your Wallet. Additionally, you'll need to
+                  supported card in your Wallet. Additionally, you`&apos;`ll need to
                   use Safari to use Apple Pay on Nike.com.
                 </p>
               </div>
@@ -141,7 +141,7 @@ export default function HelpCenter() {
               <ul className="space-y-2">
                 <li>
                   <a href="#" className="text-gray-600 hover:underline">
-                    WHAT ARE NIKE'S DELIVERY OPTIONS?
+                    WHAT ARE NIKE`&apos;`S DELIVERY OPTIONS?
                   </a>
                 </li>
                 <li>
@@ -186,7 +186,7 @@ export default function HelpCenter() {
             <div className="flex lg:flex-col justify-start lg:justify-center items-center gap-6 w-full lg:w-auto space-y-4">
               <Mail className="w-12 h-12" />
               <div className="flex flex-col justify-center items-center text-center w-full">
-                <p className="text-gray-600">We'll reply within</p>
+                <p className="text-gray-600">We`&apos;`ll reply within</p>
                 <p className="text-gray-600">five business days</p>
               </div>
             </div>

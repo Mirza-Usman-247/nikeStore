@@ -5,10 +5,8 @@ import MenuSection from "./MenuSection";
 import Link from "next/link";
 import Navigationbar from "./Navigationbar";
 import Serchbar from "./Serchbar";
-import Favourite from "./Favourite";
 import Carticon from "./Carticon";
 import logo1 from "@/public/images/logo1.png";
-import { BiUser } from "react-icons/bi";
 import User from "./User";
 
 const Navbar = () => {

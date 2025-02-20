@@ -1,11 +1,11 @@
-'use client'
+"use client";
 import { client } from "@/sanity/lib/client";
-import { Image as IImage, SlugInput } from "sanity";
+import { Image as IImage } from "sanity";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
-import Container from "./Container";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { BiLoaderAlt } from "react-icons/bi";
 
 interface productType {
   productName: string;
@@ -42,45 +42,50 @@ const GearUpProduct = () => {
           shop
         </h1>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3">
-        {isProducts.map((val, i) => {
-          return (
-            <div
-              className="space-y-2 py-3 snap-center"
-              key={i}
-            >
-              <Link href={`/products/${val.slug.current}`} className="">
-                <Image
-                  src={
-                    val.image ? urlFor(val.image).url() : "/fallback-image.jpg"
-                  }
-                  alt={val.productName}
-                  width={441}
-                  height={441}
-                  className="lg:h-[441px] w-full object-cover"
-                  quality={80}
-                />
-              </Link>
-              <div className="flex flex-col gap-y-2">
-                <div className="flex justify-between">
-                  <h4 className="text-base font-medium line-clamp-1 text-[#111111]">
-                    {val.productName}
-                  </h4>
-                  <h1 className="text-base font-medium text-[#111111]">
-                   {val.price}.00$
-                  </h1>
-                </div>
-                <div>
-                  
-                  <p className="text-base font-normal line-clamp-1 text-[#757575]">
-                    {val.category}
-                  </p>
+      {isLaoding ? (
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3">
+          {isProducts.map((val, i) => {
+            return (
+              <div className="space-y-2 py-3 snap-center" key={i}>
+                <Link href={`/products/${val.slug.current}`} className="">
+                  <Image
+                    src={
+                      val.image
+                        ? urlFor(val.image).url()
+                        : "/fallback-image.jpg"
+                    }
+                    alt={val.productName}
+                    width={441}
+                    height={441}
+                    className="lg:h-[441px] w-full object-cover"
+                    quality={80}
+                  />
+                </Link>
+                <div className="flex flex-col gap-y-2">
+                  <div className="flex justify-between">
+                    <h4 className="text-base font-medium line-clamp-1 text-[#111111]">
+                      {val.productName}
+                    </h4>
+                    <h1 className="text-base font-medium text-[#111111]">
+                      {val.price}.00$
+                    </h1>
+                  </div>
+                  <div>
+                    <p className="text-base font-normal line-clamp-1 text-[#757575]">
+                      {val.category}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      ) : (
+        <div className="flex justify-center items-center gap-2 w-full text-2xl font-medium">
+          <BiLoaderAlt className="w-5 h-5 animate-spin" />
+          Loading...
+        </div>
+      )}
     </div>
   );
 };

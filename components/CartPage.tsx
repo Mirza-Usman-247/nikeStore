@@ -1,5 +1,5 @@
 "use client";
-import useCartStore, { CartItem } from "@/cartStore";
+import useCartStore from "@/cartStore";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
@@ -27,18 +27,6 @@ const CartPage = () => {
       </div>
     );
   }
-  const handleCheckout = () => {
-    setLoading(true);
-    try {
-      const metadata = {
-        ordername: crypto.randomUUID(),
-      };
-    } catch (error) {
-      console.log("Error creating checkout page", error);
-    } finally {
-      setLoading(false);
-    }
-  };
   return (
     <div className="flex flex-col lg:flex-row ">
       <div className="lg:w-[70%]">
@@ -141,7 +129,6 @@ const CartPage = () => {
         <Button
           className="w-full rounded-full px-3 h-14 text-xl text-center flex items-center"
           size="lg"
-          onClick={handleCheckout}
         >
           Checkout
         </Button>

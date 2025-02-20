@@ -8,7 +8,7 @@ const DontMiss = () => {
     <div className="w-full">
       <div className="py-3 capitalize">
         <h1 className="text-xl font-medium text-[#111111] text-left">
-          Don't Miss
+          Don`&apos;`t Miss
         </h1>
       </div>
       <div>

@@ -22,7 +22,7 @@ const Essential = () => {
             />
             <div className="absolute bottom-10 left-5">
               <span className="px-4 py-2 bg-white rounded-full text-sm font-medium">
-                Men's
+                Men`&apos;`s
               </span>
             </div>
           </div>
@@ -40,7 +40,7 @@ const Essential = () => {
             />
             <div className="absolute bottom-10 left-5">
               <span className="px-4 py-2 bg-white rounded-full text-sm font-medium">
-                Women's
+                Women`&apos;`s
               </span>
             </div>
           </div>
@@ -58,7 +58,7 @@ const Essential = () => {
             />
             <div className="absolute bottom-10 left-5">
               <span className="px-4 py-2 bg-white rounded-full text-sm font-medium">
-                Kids'
+                Kids`&apos;`
               </span>
             </div>
           </div>

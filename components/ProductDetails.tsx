@@ -1,11 +1,7 @@
 
 import { client } from "@/sanity/lib/client";
-import { Image as IImage } from "sanity";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
-import { Button } from "./ui/button";
-import { IoBagOutline } from "react-icons/io5";
-import { CiHeart } from "react-icons/ci";
 import AddToCart from "./AddToCart";
 
 

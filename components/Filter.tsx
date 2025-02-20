@@ -25,6 +25,12 @@ interface productType {
   featured: string;
 }
 
+interface Filters {
+  category: string;
+  gender: string[];
+  kids: string[];
+  price: [number, number][];
+}
 interface Props {
   featured?: string;
 }
@@ -36,11 +42,11 @@ const Filter = ({ featured }: Props) => {
   const [isProducts, setProducts] = useState<productType[]>([]);
   const [isLoading, setLoading] = useState(false);
   const [showFiltered, setShowFiltered] = useState<productType[]>([]);
-  const [filters, setFilters] = useState({
+  const [filters, setFilters] = useState<Filters>({
     category: "All",
-    gender: [] as string[],
-    kids: [] as string[],
-    price: [] as [number, number][],
+    gender: [],
+    kids: [],
+    price: [],
   });
 
   // Fetch products on mount
@@ -50,7 +56,7 @@ const Filter = ({ featured }: Props) => {
         setLoading(true);
         const data = await client.fetch(query);
         if (featured) {
-          const update = data.filter((val: any) => val.featured === featured);
+          const update = data.filter((val: productType) => val.featured === featured);
           setProducts(update);
           setShowFiltered(update);
         } else {
@@ -66,7 +72,7 @@ const Filter = ({ featured }: Props) => {
     fetchData();
   }, []);
   // Apply filters
-  const filterChange = (newFilters: any) => {
+  const filterChange = (newFilters: Filters) => {
     setFilters(newFilters);
 
     let filtered = isProducts;
@@ -88,7 +94,7 @@ const Filter = ({ featured }: Props) => {
       filtered = filtered.filter((p) => {
         const price = parseInt(p.price, 10);
         return newFilters.price.some(
-          ([min, max]: any) => price >= min && price <= max
+          ([min, max]) => price >= min && price <= max
         );
       });
     }
