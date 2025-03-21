@@ -10,8 +10,7 @@ const Essential = () => {
     <div className="">
       <h2 className="text-2xl font-bold mb-6">The Essentials</h2>
       <div className="grid grid-cols-1 md:grid-cols-3">
-        {/* Men's Category */}
-        <Link href="/men" className="group relative">
+        <Link href="/category/men" className="group relative">
           <div className="relative aspect-square overflow-hidden">
             <Image
               src={Image5}
@@ -22,14 +21,12 @@ const Essential = () => {
             />
             <div className="absolute bottom-10 left-5">
               <span className="px-4 py-2 bg-white rounded-full text-sm font-medium">
-                Men`&apos;`s
+                Men&apos;s
               </span>
             </div>
           </div>
         </Link>
-
-        {/* Women's Category */}
-        <Link href="/women" className="group relative">
+        <Link href="/category/women" className="group relative">
           <div className="relative aspect-square overflow-hidden">
             <Image
               src={Image4}
@@ -40,14 +37,13 @@ const Essential = () => {
             />
             <div className="absolute bottom-10 left-5">
               <span className="px-4 py-2 bg-white rounded-full text-sm font-medium">
-                Women`&apos;`s
+                Women&apos;s
               </span>
             </div>
           </div>
         </Link>
 
-        {/* Kids' Category */}
-        <Link href="/kids" className="group relative">
+        <Link href="/category/kids" className="group relative">
           <div className="relative aspect-square overflow-hidden">
             <Image
               src={Image6}
@@ -58,7 +54,7 @@ const Essential = () => {
             />
             <div className="absolute bottom-10 left-5">
               <span className="px-4 py-2 bg-white rounded-full text-sm font-medium">
-                Kids`&apos;`
+                Kids&apos;
               </span>
             </div>
           </div>

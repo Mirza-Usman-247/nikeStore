@@ -1,5 +1,3 @@
-import { Search } from "lucide-react";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
   ThumbsUp,
@@ -10,23 +8,13 @@ import {
   MapPin,
 } from "lucide-react";
 import Container from "./Container";
+import Link from "next/link";
 
 export default function HelpCenter() {
   return (
     <Container className="flex flex-col w-full py-6">
       <h1 className="text-2xl font-bold text-center mb-8">GET HELP</h1>
-      {/* Search Bar */}
-      <div className="relative mx-auto mb-12">
-        <Input
-          type="text"
-          placeholder="What can we help you with?"
-          className="pl-4 pr-10 py-2 w-full rounded-md border"
-        />
-        <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
-      </div>
-
       <div className="flex lg:flex-row flex-col gap-10">
-        {/* Left Column - Payment Options */}
         <div className="space-y-8 w-full px-3 border-r ">
           <h2 className="text-xl font-bold">
             WHAT PAYMENT OPTIONS CAN I USE ON NIKE ORDERS?
@@ -44,8 +32,9 @@ export default function HelpCenter() {
             </p>
 
             <p>
-              If you enter your PAN information at checkout, you`&apos;`ll be able to
-              pay for your order with PayTM or a local credit or debit card.
+              If you enter your PAN information at checkout, yo&apos;ll be
+              able to pay for your order with PayTM or a local credit or debit
+              card.
             </p>
 
             <p>Apple Pay</p>
@@ -53,7 +42,7 @@ export default function HelpCenter() {
             <p>
               <span className="font-medium">Nike Members</span> can store
               multiple debit or credit cards in their profile for faster
-              checkout. If you`&apos;`re not already a Member,{" "}
+              checkout. If you&apos;re not already a Member,{" "}
               <a href="#" className="underline">
                 join us today
               </a>
@@ -61,12 +50,14 @@ export default function HelpCenter() {
             </p>
 
             <div className="flex gap-4 mt-6">
-              <Button variant="default">JOIN US</Button>
-              <Button variant="outline">SHOP NIKE</Button>
+              <Link href="/register">
+                <Button variant="default">JOIN US</Button>
+              </Link>
+              <Link href="/category">
+                <Button variant="outline">SHOP NIKE</Button>
+              </Link>
             </div>
           </div>
-
-          {/* FAQs Section */}
           <div className="space-y-6">
             <h3 className="font-bold">FAQs</h3>
 
@@ -91,8 +82,8 @@ export default function HelpCenter() {
                   Can I pay for my order with multiple methods?
                 </h4>
                 <p className="text-gray-600">
-                  No, payment for Nike orders can`&apos;`t be split between multiple
-                  payment methods.
+                  No, payment for Nike orders can&apos;t be split between
+                  multiple payment methods
                 </p>
               </div>
 
@@ -112,15 +103,13 @@ export default function HelpCenter() {
                 </h4>
                 <p className="text-gray-600">
                   To see Apple Pay as an option in the Nike App or on Nike.com,
-                  you`&apos;`ll need to use a compatible Apple device running the
-                  latest OS, be signed in to your iCloud account and have a
-                  supported card in your Wallet. Additionally, you`&apos;`ll need to
-                  use Safari to use Apple Pay on Nike.com.
+                  you`&apos;`ll need to use a compatible Apple device running
+                  the latest OS, be signed in to your iCloud account and have a
+                  supported card in your Wallet. Additionally, you&apos;ll
+                  need to use Safari to use Apple Pay on Nike.com.
                 </p>
               </div>
             </div>
-
-            {/* Feedback Section */}
             <div className="space-y-2">
               <p>Was this answer helpful?</p>
               <div className="flex gap-4">
@@ -134,14 +123,12 @@ export default function HelpCenter() {
                 </Button>
               </div>
             </div>
-
-            {/* Related Links */}
             <div className="space-y-2">
               <h3 className="font-bold">RELATED</h3>
               <ul className="space-y-2">
                 <li>
                   <a href="#" className="text-gray-600 hover:underline">
-                    WHAT ARE NIKE`&apos;`S DELIVERY OPTIONS?
+                    WHAT ARE NIKE&apos;S DELIVERY OPTIONS?
                   </a>
                 </li>
                 <li>
@@ -153,13 +140,10 @@ export default function HelpCenter() {
             </div>
           </div>
         </div>
-
-        {/* Right Column - Contact Information */}
         <div className="space-y-8 w-full lg:w-[40%]">
           <h2 className="text-xl font-bold text-center">CONTACT US</h2>
 
           <div className="flex flex-col lg:justify-center lg:items-center gap-8 px-10">
-            {/* Phone Support */}
             <div className="flex lg:flex-col justify-center items-center gap-6 w-full lg:w-3/4 space-y-4">
               <Phone className="w-12 h-12 " />
               <div className="text-center">
@@ -172,8 +156,6 @@ export default function HelpCenter() {
                 </p>
               </div>
             </div>
-
-            {/* Chat Support */}
             <div className="flex lg:flex-col justify-start lg:justify-center items-center gap-6 w-full lg:w-auto space-y-4">
               <MessageSquare className="w-12 h-12" />
               <div className="flex flex-col justify-center items-center text-center w-full">
@@ -181,17 +163,13 @@ export default function HelpCenter() {
                 <p className="text-gray-600">7 days a week</p>
               </div>
             </div>
-
-            {/* Email Support */}
             <div className="flex lg:flex-col justify-start lg:justify-center items-center gap-6 w-full lg:w-auto space-y-4">
               <Mail className="w-12 h-12" />
               <div className="flex flex-col justify-center items-center text-center w-full">
-                <p className="text-gray-600">We`&apos;`ll reply within</p>
+                <p className="text-gray-600">We&apos;ll reply within</p>
                 <p className="text-gray-600">five business days</p>
               </div>
             </div>
-
-            {/* Store Locator */}
             <div className="flex lg:flex-col justify-start lg:justify-center items-center gap-6 w-full lg:w-auto space-y-4">
               <MapPin className="w-12 h-12" />
               <div className="flex flex-col justify-center items-center text-center w-full">

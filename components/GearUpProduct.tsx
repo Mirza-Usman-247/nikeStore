@@ -42,7 +42,7 @@ const GearUpProduct = () => {
           shop
         </h1>
       </div>
-      {isLaoding ? (
+      {!isLaoding ? (
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3">
           {isProducts.map((val, i) => {
             return (

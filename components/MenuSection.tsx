@@ -5,11 +5,12 @@ import { Navbar } from "@/constant";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { AiOutlineMenu } from "react-icons/ai";
-interface Props{
-  className?: string
+import SocialMedia from "./SocialMedia";
+interface Props {
+  className?: string;
 }
 
-const MenuSection = ({className}:Props) => {
+const MenuSection = ({ className }: Props) => {
   const [isMenu, setIsMenu] = useState(false);
 
   const HandleMenu = () => {
@@ -19,7 +20,6 @@ const MenuSection = ({className}:Props) => {
     setIsMenu(false);
   };
 
-  
   return (
     <div className={cn("flex justify-start items-center", className)}>
       <div className="flex items-center justify-center" onClick={HandleMenu}>
@@ -36,7 +36,7 @@ const MenuSection = ({className}:Props) => {
       <div
         className={
           isMenu
-            ? "fixed right-0 top-0 w-[276px] h-screen shadow-md bg-[#F5F5F5] border rounded-md py-5 px-5 ease-in duration-500"
+            ? "fixed right-0 top-0 w-[276px] h-screen shadow-md text-white bg-zinc-900 border rounded-md py-5 px-5 ease-in duration-500"
             : "fixed right-[-100%] top-0 ease-in duration-500"
         }
       >
@@ -46,7 +46,7 @@ const MenuSection = ({className}:Props) => {
         >
           <RxCross2 className="w-6 h-6" />
         </div>
-        <div className="flex flex-col gap-2 pt-2">
+        <div className="flex flex-col gap-2 pt-2 mb-2">
           {Navbar.map((val) => {
             return (
               <div key={val.title}>
@@ -61,8 +61,7 @@ const MenuSection = ({className}:Props) => {
             );
           })}
         </div>
-        <div>
-        </div>
+        <SocialMedia />
       </div>
     </div>
   );

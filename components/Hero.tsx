@@ -2,6 +2,7 @@ import React from "react";
 import image1 from "@/public/images/Image1.png";
 import Image from "next/image";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -33,9 +34,11 @@ const Hero = () => {
           <Button className="bg-[#111111] hoverEffect font-medium text-md h-10 shadow-none rounded-full capitalize text-[#FFFFFF]">
             notify me
           </Button>
-          <Button className="bg-[#111111] hoverEffect font-medium text-md h-10 shadow-none rounded-full capitalize text-[#FFFFFF]">
-            shop air max
-          </Button>
+          <Link href={'/category/snkrs'}>
+            <Button className="bg-[#111111] hoverEffect font-medium text-md h-10 shadow-none rounded-full capitalize text-[#FFFFFF]">
+              shop air max
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import { Navbar } from "@/constant";
 import Link from "next/link";
+import { Navbar } from "@/constant";
 
 const Navigationbar = () => {
   return (
@@ -10,7 +10,7 @@ const Navigationbar = () => {
           return (
             <div key={val.title}>
               <Link
-                href={val.href}
+                href={`/category/${val.href}`}
                 className={`hoverEffect relative group cursor-pointer text-lg`}
               >
                 {val.title}

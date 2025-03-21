@@ -58,10 +58,6 @@ const ProductDetails = async ({ Pathname }: Props) => {
           <div className="w-full">
             <AddToCart product={slug} />
           </div>
-          {/* <Button className="bg-[#FFFFFF] w-full mt-5 h-14 text-xl hoverEffect shadow-none outline rounded-full capitalize text-[#111111] hover:bg-[#F9F9F9]">
-            add to Favourite
-            <CiHeart className="w-5 h-5" />
-          </Button> */}
         </div>
       </div>
     </div>

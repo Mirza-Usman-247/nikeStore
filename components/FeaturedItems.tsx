@@ -87,9 +87,7 @@ const FeaturedItems = ({ Name }: Props) => {
             })}
           </div>
         ) : (
-          <div>
-            No Product Plz refresh
-          </div>
+          <div>No Product Plz refresh</div>
         )}
       </div>
     </div>

@@ -2,6 +2,7 @@ import React from "react";
 import image2 from "@/public/images/Image2.png";
 import Image from "next/image";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const Featured = () => {
   return (
@@ -31,9 +32,11 @@ const Featured = () => {
           </p>
         </div>
         <div className="flex justify-center items-center">
-          <Button className="bg-[#111111] hoverEffect text-md shadow-none rounded-full capitalize text-[#FFFFFF]">
-            find your shoe
-          </Button>
+          <Link href="/category">
+            <Button className="bg-[#111111] hoverEffect text-md shadow-none rounded-full capitalize text-[#FFFFFF]">
+              find your shoe
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

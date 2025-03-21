@@ -2,13 +2,14 @@ import React from "react";
 import image3 from "@/public/images/Image3.png";
 import Image from "next/image";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const DontMiss = () => {
   return (
     <div className="w-full">
       <div className="py-3 capitalize">
         <h1 className="text-xl font-medium text-[#111111] text-left">
-          Don`&apos;`t Miss
+          Don&apos;t Miss
         </h1>
       </div>
       <div>
@@ -31,9 +32,11 @@ const DontMiss = () => {
           </p>
         </div>
         <div className="flex justify-center items-center">
-          <Button className="bg-[#111111] hoverEffect text-md shadow-none rounded-full capitalize text-[#FFFFFF]">
-            shop
-          </Button>
+          <Link href="/category">
+            <Button className="bg-[#111111] hoverEffect text-md shadow-none rounded-full capitalize text-[#FFFFFF]">
+              shop
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
