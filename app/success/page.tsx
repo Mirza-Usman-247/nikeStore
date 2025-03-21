@@ -1,18 +1,27 @@
 "use client";
-
 import useCartStore from "@/cartStore";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { motion } from "framer-motion";
 import { Check, Home, ShoppingBag } from "lucide-react";
 import Link from "next/link";
+import Loading from "@/components/Loading";
 
 const SuccessPage = () => {
+  return (
+    <Suspense fallback={<Loading />}>
+      <SuccessPageContent />
+    </Suspense>
+  );
+};
+
+const SuccessPageContent = () => {
   const searchParams = useSearchParams();
   const orderNumber = searchParams.get("orderNumber");
   const sessionId = searchParams.get("session_id");
   const { resetCart } = useCartStore();
   const router = useRouter();
+
   useEffect(() => {
     if (!orderNumber && !sessionId) {
       router.push("/");
